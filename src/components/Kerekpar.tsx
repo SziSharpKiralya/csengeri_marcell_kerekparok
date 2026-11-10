@@ -12,14 +12,24 @@ export function Kerekpar({ id, kerekpar }: Props) {
   return (
     <>
       <div className="card col-md-4 p-3" key={id}>
-        <h3 className="" style={{ color: kerekpar.szin }}> {kerekpar.nev}</h3>
-        <button className="btn btn-primary " onClick={() => setMegjelen(!megjelen)}>
+        <h3 className="" style={{ color: kerekpar.szin }}>
+          {" "}
+          {kerekpar.nev}
+        </h3>
+        <button
+          className="btn btn-primary "
+          onClick={() => setMegjelen(!megjelen)}
+        >
           {megjelen ? "Részletek elrejtése" : "Részletek megjelenítése"}
         </button>
         {megjelen && (
           <div className="">
-            <p><em>Tipus: {kerekpar.tipus}</em></p>
-            <p><u>Napi díj: {kerekpar.napiDij}</u></p>
+            <p>
+              <em>Tipus: {kerekpar.tipus}</em>
+            </p>
+            <p>
+              <u>Napi díj: {kerekpar.napiDij}</u>
+            </p>
           </div>
         )}
       </div>
